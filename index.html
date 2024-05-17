@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        input[type="file"] {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 300px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #downloadLink {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Upload Page updated</h1>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <br>
+        Select processing type:
+        <select name="processingType" id="processingType">
+            <option value="edge-detection">Edge Detection</option>
+            <option value="color-inversion">Color Inversion</option>
+            <option value="gray-scale">Grayscale</option>
+            <option value="blur">Blur</option>
+            <option value="sharpen">Sharpen</option>
+            <!-- Add more options as needed -->
+        </select>
+        <br>
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+    <p id="downloadLink">Download link will appear here after the photo is processed.</p>
+</body>
+
+</html>

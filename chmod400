@@ -1,0 +1,3 @@
+icacls.exe .\petazm42.pem /reset
+icacls.exe .\petazm42.pem /grant:r "$($env:username):(r)"
+icacls.exe .\petazm42.pem /inheritance:r
